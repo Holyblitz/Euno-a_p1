@@ -1,0 +1,87 @@
+[
+  {
+    "dossier": "/",
+    "fonction": "Racine du système de fichiers. Point de départ de toute l’arborescence.",
+    "exemple": "/"
+  },
+  {
+    "dossier": "/bin",
+    "fonction": "Contient les commandes essentielles accessibles par tous les utilisateurs.",
+    "exemple": "/bin/ls, /bin/cp"
+  },
+  {
+    "dossier": "/boot",
+    "fonction": "Contient les fichiers de démarrage (noyau, GRUB…).",
+    "exemple": "/boot/grub, /boot/vmlinuz"
+  },
+  {
+    "dossier": "/dev",
+    "fonction": "Fichiers représentant les périphériques (disques, USB, etc.).",
+    "exemple": "/dev/sda, /dev/null"
+  },
+  {
+    "dossier": "/etc",
+    "fonction": "Fichiers de configuration du système.",
+    "exemple": "/etc/fstab, /etc/hostname"
+  },
+  {
+    "dossier": "/home",
+    "fonction": "Répertoires personnels des utilisateurs.",
+    "exemple": "/home/romain"
+  },
+  {
+    "dossier": "/lib",
+    "fonction": "Bibliothèques partagées nécessaires au démarrage du système.",
+    "exemple": "/lib/x86_64-linux-gnu"
+  },
+  {
+    "dossier": "/media",
+    "fonction": "Points de montage pour les médias amovibles.",
+    "exemple": "/media/usb"
+  },
+  {
+    "dossier": "/mnt",
+    "fonction": "Point de montage temporaire pour des systèmes de fichiers.",
+    "exemple": "/mnt/backup"
+  },
+  {
+    "dossier": "/opt",
+    "fonction": "Contient des logiciels additionnels ou propriétaires.",
+    "exemple": "/opt/google/chrome"
+  },
+  {
+    "dossier": "/proc",
+    "fonction": "Pseudo-système de fichiers pour les processus et le noyau.",
+    "exemple": "/proc/cpuinfo, /proc/meminfo"
+  },
+  {
+    "dossier": "/root",
+    "fonction": "Dossier personnel de l'utilisateur root.",
+    "exemple": "/root"
+  },
+  {
+    "dossier": "/sbin",
+    "fonction": "Commandes système réservées à l’administrateur.",
+    "exemple": "/sbin/reboot"
+  },
+  {
+    "dossier": "/srv",
+    "fonction": "Contient les données des services (web, FTP…).",
+    "exemple": "/srv/www"
+  },
+  {
+    "dossier": "/tmp",
+    "fonction": "Fichiers temporaires supprimés au redémarrage.",
+    "exemple": "/tmp/fichier.tmp"
+  },
+  {
+    "dossier": "/usr",
+    "fonction": "Programmes utilisateur et bibliothèques partagées.",
+    "exemple": "/usr/bin, /usr/lib"
+  },
+  {
+    "dossier": "/var",
+    "fonction": "Fichiers variables (logs, mails, spool…).",
+    "exemple": "/var/log, /var/mail"
+  }
+]

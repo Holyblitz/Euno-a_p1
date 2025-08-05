@@ -1,0 +1,597 @@
+[
+  {
+    "commande": "ls",
+    "description": "List files one per line:",
+    "exemple": "ls -1"
+  },
+  {
+    "commande": "ls",
+    "description": "List all files, including hidden files:",
+    "exemple": "ls {{[-a|--all]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "List files with a trailing symbol to indicate file type (directory/, symbolic_link@, executable*, ...):",
+    "exemple": "ls {{[-F|--classify]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "List all files in [l]ong format (permissions, ownership, size, and modification date):",
+    "exemple": "ls {{[-la|-l --all]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "List files in [l]ong format with size displayed using human-readable units (KiB, MiB, GiB):",
+    "exemple": "ls {{[-lh|-l --human-readable]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "List files in [l]ong format, sorted by [S]ize (descending) recursively:",
+    "exemple": "ls {{[-lSR|-lS --recursive]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "List files in [l]ong format, sorted by [t]ime the file was modified and in reverse order (oldest first):",
+    "exemple": "ls {{[-ltr|-lt --reverse]}}"
+  },
+  {
+    "commande": "ls",
+    "description": "Only list directories:",
+    "exemple": "ls {{[-d|--directory]}} */"
+  },
+  {
+    "commande": "cd",
+    "description": "Go to the specified directory:",
+    "exemple": "cd {{path/to/directory}}"
+  },
+  {
+    "commande": "cd",
+    "description": "Go up to the parent of the current directory:",
+    "exemple": "cd .."
+  },
+  {
+    "commande": "cd",
+    "description": "Go to the home directory of the current user:",
+    "exemple": "cd"
+  },
+  {
+    "commande": "cd",
+    "description": "Go to the home directory of the specified user:",
+    "exemple": "cd ~{{username}}"
+  },
+  {
+    "commande": "cd",
+    "description": "Go to the previously chosen directory:",
+    "exemple": "cd -"
+  },
+  {
+    "commande": "cd",
+    "description": "Go to the root directory:",
+    "exemple": "cd /"
+  },
+  {
+    "commande": "cp",
+    "description": "Copy a file to another location:",
+    "exemple": "cp {{path/to/source_file.ext}} {{path/to/target_file.ext}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Copy a file into another directory, keeping the filename:",
+    "exemple": "cp {{path/to/source_file.ext}} {{path/to/target_parent_directory}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Recursively copy a directory's contents to another location (if the destination exists, the directory is copied inside it):",
+    "exemple": "cp {{[-r|--recursive]}} {{path/to/source_directory}} {{path/to/target_directory}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Copy a directory recursively, in verbose mode (shows files as they are copied):",
+    "exemple": "cp {{[-vr|--verbose --recursive]}} {{path/to/source_directory}} {{path/to/target_directory}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Copy multiple files at once to a directory:",
+    "exemple": "cp {{[-t|--target-directory]}} {{path/to/destination_directory}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Copy all files with a specific extension to another location, in interactive mode (prompts user before overwriting):",
+    "exemple": "cp {{[-i|--interactive]}} {{*.ext}} {{path/to/target_directory}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Follow symbolic links before copying:",
+    "exemple": "cp {{[-L|--dereference]}} {{link}} {{path/to/target_directory}}"
+  },
+  {
+    "commande": "cp",
+    "description": "Use the full path of source files, creating any missing intermediate directories when copying:",
+    "exemple": "cp --parents {{source/path/to/file}} {{path/to/target_file}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Rename a file or directory when the target is not an existing directory:",
+    "exemple": "mv {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Move a file or directory into an existing directory:",
+    "exemple": "mv {{path/to/source}} {{path/to/existing_directory}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Move multiple files into an existing directory, keeping the filenames unchanged:",
+    "exemple": "mv {{path/to/source1 path/to/source2 ...}} {{path/to/existing_directory}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Do not prompt for confirmation before overwriting existing files:",
+    "exemple": "mv {{[-f|--force]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Prompt for confirmation interactively before overwriting existing files, regardless of file permissions:",
+    "exemple": "mv {{[-i|--interactive]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Do not overwrite existing files at the target:",
+    "exemple": "mv {{[-n|--no-clobber]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Move files in verbose mode, showing files after they are moved:",
+    "exemple": "mv {{[-v|--verbose]}} {{path/to/source}} {{path/to/target}}"
+  },
+  {
+    "commande": "mv",
+    "description": "Specify target directory so that you can use external tools to gather movable files:",
+    "exemple": "{{find /var/log -type f -name '*.log' -print0}} | {{xargs -0}} mv {{[-t|--target-directory]}} {{path/to/target_directory}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove specific files:",
+    "exemple": "rm {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove specific files ignoring nonexistent ones:",
+    "exemple": "rm {{[-f|--force]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove specific files interactively prompting before each removal:",
+    "exemple": "rm {{[-i|--interactive]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove specific files printing info about each removal:",
+    "exemple": "rm {{[-v|--verbose]}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove specific files and directories recursively:",
+    "exemple": "rm {{[-r|--recursive]}} {{path/to/file_or_directory1 path/to/file_or_directory2 ...}}"
+  },
+  {
+    "commande": "rm",
+    "description": "Remove empty directories (this is considered the safe method):",
+    "exemple": "rm {{[-d|--dir]}} {{path/to/directory}}"
+  },
+  {
+    "commande": "mkdir",
+    "description": "Create specific directories:",
+    "exemple": "mkdir {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "commande": "mkdir",
+    "description": "Create specific directories and their parents if needed:",
+    "exemple": "mkdir {{[-p|--parents]}} {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "commande": "mkdir",
+    "description": "Create directories with specific permissions:",
+    "exemple": "mkdir {{[-m|--mode]}} {{rwxrw-r--}} {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "commande": "mkdir",
+    "description": "Create multiple nested directories recursively:",
+    "exemple": "mkdir {{[-p|--parents]}} {{path/to/{a,b}/{x,y,z}/{h,i,j}}}"
+  },
+  {
+    "commande": "rmdir",
+    "description": "Remove specific directories:",
+    "exemple": "rmdir {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "commande": "rmdir",
+    "description": "Remove specific nested directories recursively:",
+    "exemple": "rmdir {{[-p|--parents]}} {{path/to/directory1 path/to/directory2 ...}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Create specific files:",
+    "exemple": "touch {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Set the file [a]ccess or [m]odification times to the current one and don't create file if it doesn't exist:",
+    "exemple": "touch {{[-c|--no-create]}} -{{a|m}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Set the file [t]ime to a specific value and don't create file if it doesn't exist:",
+    "exemple": "touch {{[-c|--no-create]}} -t {{YYYYMMDDHHMM.SS}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Set the files' timestamp to the reference file's timestamp, and do not create the file if it does not exist:",
+    "exemple": "touch {{[-c|--no-create]}} {{[-r|--reference]}} {{path/to/reference_file}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Set the timestamp by parsing a string:",
+    "exemple": "touch {{[-d|--date]}} \"{{last year|5 hours|next thursday|nov 14|...}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Create multiple files with an increasing number:",
+    "exemple": "touch {{path/to/file{1..10}}}"
+  },
+  {
+    "commande": "touch",
+    "description": "Create multiple files with a letter range:",
+    "exemple": "touch {{path/to/file{a..z}}}"
+  },
+  {
+    "commande": "cat",
+    "description": "Print the contents of a file to `stdout`:",
+    "exemple": "cat {{path/to/file}}"
+  },
+  {
+    "commande": "cat",
+    "description": "Concatenate several files into an output file:",
+    "exemple": "cat {{path/to/file1 path/to/file2 ...}} > {{path/to/output_file}}"
+  },
+  {
+    "commande": "cat",
+    "description": "Append several files to an output file:",
+    "exemple": "cat {{path/to/file1 path/to/file2 ...}} >> {{path/to/output_file}}"
+  },
+  {
+    "commande": "cat",
+    "description": "Copy the contents of a file into an output file without buffering:",
+    "exemple": "cat -u {{/dev/tty12}} > {{/dev/tty13}}"
+  },
+  {
+    "commande": "cat",
+    "description": "Write `stdin` to a file:",
+    "exemple": "cat - > {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Search for a pattern within a file:",
+    "exemple": "grep \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Search for an exact string (disables `regex`es):",
+    "exemple": "grep {{[-F|--fixed-strings]}} \"{{exact_string}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Search for a pattern in all files recursively in a directory, showing line numbers of matches, ignoring binary files:",
+    "exemple": "grep {{[-rnI|--recursive --line-number --binary-files=without-match]}} \"{{search_pattern}}\" {{path/to/directory}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Use extended `regex`es (supports `?`, `+`, `{}`, `()`, and `|`), in case-insensitive mode:",
+    "exemple": "grep {{[-Ei|--extended-regexp --ignore-case]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Print 3 lines of [C]ontext around, [B]efore or [A]fter each match:",
+    "exemple": "grep {{--context|--before-context|--after-context}} 3 \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Print file name and line number for each match with color output:",
+    "exemple": "grep {{[-Hn|--with-filename --line-number]}} --color=always \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Search for lines matching a pattern, printing only the matched text:",
+    "exemple": "grep {{[-o|--only-matching]}} \"{{search_pattern}}\" {{path/to/file}}"
+  },
+  {
+    "commande": "grep",
+    "description": "Search `stdin` for lines that do not match a pattern:",
+    "exemple": "cat {{path/to/file}} | grep {{[-v|--invert-match]}} \"{{search_pattern}}\""
+  },
+  {
+    "commande": "find",
+    "description": "Find files by extension:",
+    "exemple": "find {{root_path}} -name '{{*.ext}}'"
+  },
+  {
+    "commande": "find",
+    "description": "Find files matching multiple path/name patterns:",
+    "exemple": "find {{root_path}} -path '{{*/path/*/*.ext}}' -or -name '{{*pattern*}}'"
+  },
+  {
+    "commande": "find",
+    "description": "Find directories matching a given name, in case-insensitive mode:",
+    "exemple": "find {{root_path}} -type d -iname '{{*lib*}}'"
+  },
+  {
+    "commande": "find",
+    "description": "Find files matching a given pattern, excluding specific paths:",
+    "exemple": "find {{root_path}} -name '{{*.py}}' -not -path '{{*/site-packages/*}}'"
+  },
+  {
+    "commande": "find",
+    "description": "Find files matching a given size range, limiting the recursive depth to \"1\":",
+    "exemple": "find {{root_path}} -maxdepth 1 -size {{+500k}} -size {{-10M}}"
+  },
+  {
+    "commande": "find",
+    "description": "Run a command for each file (use `{}` within the command to access the filename):",
+    "exemple": "find {{root_path}} -name '{{*.ext}}' -exec {{wc -l}} {} \\;"
+  },
+  {
+    "commande": "find",
+    "description": "Find all files modified today and pass the results to a single command as arguments:",
+    "exemple": "find {{root_path}} -daystart -mtime {{-1}} -exec {{tar -cvf archive.tar}} {} \\+"
+  },
+  {
+    "commande": "find",
+    "description": "Search for either empty files or directories and delete them verbosely:",
+    "exemple": "find {{root_path}} -type {{f|d}} -empty -delete -print"
+  },
+  {
+    "commande": "chmod",
+    "description": "Give the [u]ser who owns a file the right to e[x]ecute it:",
+    "exemple": "chmod u+x {{path/to/file}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Give the [u]ser rights to [r]ead and [w]rite to a file/directory:",
+    "exemple": "chmod u+rw {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Remove e[x]ecutable rights from the [g]roup:",
+    "exemple": "chmod g-x {{path/to/file}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Give [a]ll users rights to [r]ead and e[x]ecute:",
+    "exemple": "chmod a+rx {{path/to/file}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Give [o]thers (not in the file owner's group) the same rights as the [g]roup:",
+    "exemple": "chmod o=g {{path/to/file}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Remove all rights from [o]thers:",
+    "exemple": "chmod o= {{path/to/file}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Change permissions recursively giving [g]roup and [o]thers the ability to [w]rite:",
+    "exemple": "chmod {{[-R|--recursive]}} g+w,o+w {{path/to/directory}}"
+  },
+  {
+    "commande": "chmod",
+    "description": "Recursively give [a]ll users [r]ead permissions to files and e[X]ecute permissions to sub-directories within a directory:",
+    "exemple": "chmod {{[-R|--recursive]}} a+rX {{path/to/directory}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Change the owner user of a file/directory:",
+    "exemple": "chown {{user}} {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Change the owner user and group of a file/directory:",
+    "exemple": "chown {{user}}:{{group}} {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Change the owner user and group to both have the name `user`:",
+    "exemple": "chown {{user}}: {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Recursively change the owner of a directory and its contents:",
+    "exemple": "chown {{[-R|--recursive]}} {{user}} {{path/to/directory}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Change the owner of a symbolic link:",
+    "exemple": "chown {{[-h|--no-dereference]}} {{user}} {{path/to/symlink}}"
+  },
+  {
+    "commande": "chown",
+    "description": "Change the owner of a file/directory to match a reference file:",
+    "exemple": "chown --reference {{path/to/reference_file}} {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "pwd",
+    "description": "Print the current directory:",
+    "exemple": "pwd"
+  },
+  {
+    "commande": "pwd",
+    "description": "Print the current directory, and resolve all symlinks (i.e. show the \"physical\" path):",
+    "exemple": "pwd {{[-P|--physical]}}"
+  },
+  {
+    "commande": "pwd",
+    "description": "Display help:",
+    "exemple": "pwd --help"
+  },
+  {
+    "commande": "echo",
+    "description": "Print a text message. Note: Quotes are optional:",
+    "exemple": "echo \"{{Hello World}}\""
+  },
+  {
+    "commande": "echo",
+    "description": "Print a message with environment variables:",
+    "exemple": "echo \"{{My path is $PATH}}\""
+  },
+  {
+    "commande": "echo",
+    "description": "Print a message without the trailing newline:",
+    "exemple": "echo -n \"{{Hello World}}\""
+  },
+  {
+    "commande": "echo",
+    "description": "Append a message to the file:",
+    "exemple": "echo \"{{Hello World}}\" >> {{file.txt}}"
+  },
+  {
+    "commande": "echo",
+    "description": "Enable interpretation of backslash escapes (special characters):",
+    "exemple": "echo -e \"{{Column 1\\tColumn 2}}\""
+  },
+  {
+    "commande": "echo",
+    "description": "Print the exit status of the last executed command (Note: In Windows Command Prompt and PowerShell the equivalent commands are `echo %errorlevel%` and `$lastexitcode` respectively):",
+    "exemple": "echo $?"
+  },
+  {
+    "commande": "head",
+    "description": "Output the first few lines of a file:",
+    "exemple": "head -n {{count}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Show last 'count' lines in file:",
+    "exemple": "tail {{[-n|--lines]}} {{count}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Print a file from a specific line number:",
+    "exemple": "tail {{[-n|--lines]}} +{{count}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Print a specific count of bytes from the end of a given file:",
+    "exemple": "tail {{[-c|--bytes]}} {{count}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Print the last lines of a given file and keep reading it until `<Ctrl c>`:",
+    "exemple": "tail {{[-f|--follow]}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Keep reading file until `<Ctrl c>`, even if the file is inaccessible:",
+    "exemple": "tail {{[-F|--retry --follow]}} {{path/to/file}}"
+  },
+  {
+    "commande": "tail",
+    "description": "Show last 'num' lines in 'file' and refresh every 'n' seconds:",
+    "exemple": "tail {{[-n|--lines]}} {{count}} {{[-s|--sleep-interval]}} {{seconds}} {{[-f|--follow]}} {{path/to/file}}"
+  },
+  {
+    "commande": "du",
+    "description": "List the sizes of a directory and any subdirectories, in the given unit (B/KiB/MiB):",
+    "exemple": "du -{{b|k|m}} {{path/to/directory}}"
+  },
+  {
+    "commande": "du",
+    "description": "List the sizes of a directory and any subdirectories, in human-readable form (i.e. auto-selecting the appropriate unit for each size):",
+    "exemple": "du {{[-h|--human-readable]}} {{path/to/directory}}"
+  },
+  {
+    "commande": "du",
+    "description": "Show the size of a single directory, in human-readable units:",
+    "exemple": "du {{[-sh|--summarize --human-readable]}} {{path/to/directory}}"
+  },
+  {
+    "commande": "du",
+    "description": "List the human-readable sizes of a directory and of all the files and directories within it:",
+    "exemple": "du {{[-ah|--all --human-readable]}} {{path/to/directory}}"
+  },
+  {
+    "commande": "du",
+    "description": "List the human-readable sizes of a directory and any subdirectories, up to N levels deep:",
+    "exemple": "du {{[-h|--human-readable]}} {{[-d|--max-depth]}} N {{path/to/directory}}"
+  },
+  {
+    "commande": "du",
+    "description": "List the human-readable size of all `.jpg` files in current directory, and show a cumulative total at the end:",
+    "exemple": "du {{[-ch|--total --human-readable]}} {{./*.jpg}}"
+  },
+  {
+    "commande": "du",
+    "description": "List all files and directories (including hidden ones) above a certain threshold size (useful for investigating what is actually taking up the space):",
+    "exemple": "du {{[-ah|--all --human-readable]}} {{[-t|--threshold]}} {{1G|1024M|1048576K}} .[^.]* *"
+  },
+  {
+    "commande": "df",
+    "description": "Display all filesystems and their disk usage using 512-byte units:",
+    "exemple": "df"
+  },
+  {
+    "commande": "df",
+    "description": "Display the filesystem and its disk usage containing the given file or directory:",
+    "exemple": "df {{path/to/file_or_directory}}"
+  },
+  {
+    "commande": "df",
+    "description": "Use 1024-byte units when writing space figures:",
+    "exemple": "df -k"
+  },
+  {
+    "commande": "df",
+    "description": "Display information in a portable way:",
+    "exemple": "df -P"
+  },
+  {
+    "commande": "tar",
+    "description": "[c]reate an archive and write it to a [f]ile:",
+    "exemple": "tar cf {{path/to/target.tar}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "tar",
+    "description": "[c]reate a g[z]ipped archive and write it to a [f]ile:",
+    "exemple": "tar czf {{path/to/target.tar.gz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "tar",
+    "description": "[c]reate a g[z]ipped (compressed) archive from a directory using relative paths:",
+    "exemple": "tar czf {{path/to/target.tar.gz}} {{[-C|--directory]}} {{path/to/directory}} ."
+  },
+  {
+    "commande": "tar",
+    "description": "E[x]tract a (compressed) archive [f]ile into the current directory [v]erbosely:",
+    "exemple": "tar xvf {{path/to/source.tar[.gz|.bz2|.xz]}}"
+  },
+  {
+    "commande": "tar",
+    "description": "E[x]tract a (compressed) archive [f]ile into the target directory:",
+    "exemple": "tar xf {{path/to/source.tar[.gz|.bz2|.xz]}} {{[-C|--directory]}} {{path/to/directory}}"
+  },
+  {
+    "commande": "tar",
+    "description": "[c]reate a compressed archive and write it to a [f]ile, using the file extension to [a]utomatically determine the compression program:",
+    "exemple": "tar caf {{path/to/target.tar.xz}} {{path/to/file1 path/to/file2 ...}}"
+  },
+  {
+    "commande": "tar",
+    "description": "Lis[t] the contents of a tar [f]ile [v]erbosely:",
+    "exemple": "tar tvf {{path/to/source.tar}}"
+  },
+  {
+    "commande": "tar",
+    "description": "E[x]tract files matching a pattern from an archive [f]ile:",
+    "exemple": "tar xf {{path/to/source.tar}} --wildcards \"{{*.html}}\""
+  }
+]

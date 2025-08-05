@@ -1,0 +1,61 @@
+[
+  {
+    "commande": "ls",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  },
+  {
+    "commande": "cp",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  },
+  {
+    "commande": "mv",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  },
+  {
+    "commande": "rm",
+    "synopsis": "|",
+    "description": "|",
+    "options": [
+      {
+        "option": "--interactive=always",
+        "explication": "option is given, rm prompts the user for"
+      }
+    ]
+  },
+  {
+    "commande": "mkdir",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  },
+  {
+    "commande": "chmod",
+    "synopsis": "|",
+    "description": "| SETUID AND SETGID BITS | RESTRICTED DELETION FLAG OR STICKY BIT |",
+    "options": []
+  },
+  {
+    "commande": "chown",
+    "synopsis": "|",
+    "description": "|",
+    "options": []
+  },
+  {
+    "commande": "touch",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  },
+  {
+    "commande": "cat",
+    "synopsis": "|",
+    "description": "",
+    "options": []
+  }
+]
